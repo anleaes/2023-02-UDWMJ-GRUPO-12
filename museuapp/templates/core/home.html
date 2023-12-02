@@ -10,68 +10,23 @@
   <h1 class="py-4">Artes em esposição:</h1>
 
   <div class="d-flex">
+  {% for arte in artes %}
     <div class="card" style="width: 18rem; flex: 0 0 calc(33.3333% - 20px); max-width: calc(33.3333% - 20px); margin-bottom: 20px;">
       <img class="card-img-top" src="https://ceugaleria.com.br/galeria/wp-content/uploads/2019/11/Conheca-5-belas-artes-famosas-na-histo%CC%81ria-da-arte-noite-estrelada-ceu-galeria.jpg" alt="Imagem de capa do card">
       <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+        <h5 class="card-title">{{ arte.name }}</h5>
+        <p class="card-text">{{ arte.description }}</p>
         <a href="#" class="btn btn-primary">Visitar</a>
       </div>
     </div>
-
-    <div class="card" style="width: 18rem; flex: 0 0 calc(33.3333% - 20px); max-width: calc(33.3333% - 20px); margin-bottom: 20px;">
-      <img class="card-img-top" src="https://ceugaleria.com.br/galeria/wp-content/uploads/2019/11/Conheca-5-belas-artes-famosas-na-histo%CC%81ria-da-arte-noite-estrelada-ceu-galeria.jpg" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem; flex: 0 0 calc(33.3333% - 20px); max-width: calc(33.3333% - 20px); margin-bottom: 20px;">
-      <img class="card-img-top" src="https://ceugaleria.com.br/galeria/wp-content/uploads/2019/11/Conheca-5-belas-artes-famosas-na-histo%CC%81ria-da-arte-noite-estrelada-ceu-galeria.jpg" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem; flex: 0 0 calc(33.3333% - 20px); max-width: calc(33.3333% - 20px); margin-bottom: 20px;">
-      <img class="card-img-top" src="https://ceugaleria.com.br/galeria/wp-content/uploads/2019/11/Conheca-5-belas-artes-famosas-na-histo%CC%81ria-da-arte-noite-estrelada-ceu-galeria.jpg" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem; flex: 0 0 calc(33.3333% - 20px); max-width: calc(33.3333% - 20px); margin-bottom: 20px;">
-      <img class="card-img-top" src="https://ceugaleria.com.br/galeria/wp-content/uploads/2019/11/Conheca-5-belas-artes-famosas-na-histo%CC%81ria-da-arte-noite-estrelada-ceu-galeria.jpg" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem; flex: 0 0 calc(33.3333% - 20px); max-width: calc(33.3333% - 20px); margin-bottom: 20px;">
-      <img class="card-img-top" src="https://ceugaleria.com.br/galeria/wp-content/uploads/2019/11/Conheca-5-belas-artes-famosas-na-histo%CC%81ria-da-arte-noite-estrelada-ceu-galeria.jpg" alt="Imagem de capa do card">
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-      </div>
-    </div>
-  
-
+  {% endfor %}
   </div>
 </div>
 
 <style>
-  .d-flex {
+  .d-flex {                   
     display: flex;
-    flex-wrap: wrap; /* Garante que os cards quebrem para a próxima linha se não couberem na tela */
+    flex-wrap: wrap; /* Garante que os cards quebrem para a próxima linha se não couberem na tela */  /* d-flex = para ficar um do lado do outro(imagens)
     gap: 20px; /* Espaçamento entre os cards */
   }
 </style>
