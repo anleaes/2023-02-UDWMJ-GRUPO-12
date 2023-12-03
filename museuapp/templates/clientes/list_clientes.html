@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+% extends 'base.html' %}
 
 {% block title %}
 
-    Lista de Historias - {{ block.super }}
+    Lista de Clientes - {{ block.super }}
 
 {% endblock title %}
 
@@ -14,7 +14,7 @@
         <div class="row">
             <div class ="col-md-12">
                 <br />
-                    <a href="{% url 'historias:add_historia' %}">Cadastro de nova Historia</a>
+                    <a href="{% url 'clientes:add_cliente' %}">Cadastro de novos clientes</a>
                 <br />
                 <br />
                 <table class="table table-hover">
@@ -28,16 +28,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for historia in historias %}
+                    {% for cliente in clientes %}
                         <tr>
-                            <th scope="row">{{ historia.id }}</th>
-                            <td>{{ historia.name }}</td>
-                            <td>{{ historia.description }}</td>
+                            <th scope="row">{{ cliente.id }}</th>
+                            <td>{{ cliente.name }}</td>
+                            <td>{{ cliente.description }}</td>
                             <td>
-                                <a href="{% url 'historias:edit_historia' historia.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="{% url 'clientes:edit_cliente' cliente.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
                             <td>
-                                <a href="{% url 'historias:delete_historia' historia.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                                <a href="{% url 'clientes:delete_cliente' cliente.id %}" class="btn btn-danger btn-sm ">Excluir</a>
                             </td>
                         </tr> 
                     {% endfor %}

@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('core.urls', namespace='core')),
     path('historias/', include('historias.urls', namespace='historias')),
     path('artes/', include('artes.urls', namespace='artes')),
-
+    path('clientes/', include('clientes.urls', namespace='clientes')),
 
 ]
 
