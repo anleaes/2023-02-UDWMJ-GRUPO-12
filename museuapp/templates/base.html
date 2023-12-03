@@ -12,21 +12,18 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img class="card-img-top" src="https://imgur.com/X4PsK2U.png" style="width: 5rem;">
         <a class="navbar-brand" href="/">Museuapp 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample05">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown05">
-                        <a class="dropdown-item" href="{% url 'clientes:list_clientes' %}">Clientes</a>
-                        <a class="dropdown-item" href="{% url 'historias:list_historias' %}">Historias</a>
-                        <a class="dropdown-item" href="{% url 'artes:list_artes' %}">Artes</a>
-                    </div>
-                </li>
-            </ul>
+            
+                        <a class="px-2" href="{% url 'clientes:list_clientes' %}">Clientes</a>    <!-- px 2 espaçamento lateral (distancia da esquerda e da direita) de 2 -->       
+                        <a class="px-2" href="{% url 'historias:list_historias' %}">Historias</a>
+                        <a class="px-2" href="{% url 'artes:list_artes' %}">Artes</a>
+                        <a class="px-2" href="{% url 'artistas:list_artistas' %}">Artistas</a>
+
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nome de usuario</a>
@@ -43,7 +40,7 @@
     {% block body %}
     
     {% endblock body %}
-    
+
     <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
     <script src="{% static 'js/jquery.mask.min.js' %}"></script>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
