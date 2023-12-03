@@ -33,6 +33,7 @@
                             <th scope="row">{{ arte.id }}</th>
                             <td>{{ arte.name }}</td>
                             <td>{{ arte.description }}</td>
+                            <td>{{ arte.url }}</td>
                             <td>
                                 <a href="{% url 'artes:edit_arte' arte.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
