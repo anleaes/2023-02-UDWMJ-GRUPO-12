@@ -5,7 +5,7 @@ class Cliente(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
-    description = models.TextField('Descricao', max_length=100) 
+    cpf = models.TextField('CPF', max_length=11) 
     
     class Meta:
         verbose_name = 'Cliente'

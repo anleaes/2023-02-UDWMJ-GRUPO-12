@@ -22,7 +22,8 @@
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Descricao</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Nascionalidade</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     </tr>
@@ -32,7 +33,8 @@
                         <tr>
                             <th scope="row">{{ artista.id }}</th>
                             <td>{{ artista.name }}</td>
-                            <td>{{ artista.description }}</td>
+                            <td>{{ artista.idade }}</td>
+                            <td>{{ artista.nascionalidade }}</td>
                             <td>
                                 <a href="{% url 'artistas:edit_artista' artista.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>

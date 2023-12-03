@@ -22,7 +22,7 @@
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Descricao</th>
+                    <th scope="col">CPF</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     </tr>
@@ -32,7 +32,7 @@
                         <tr>
                             <th scope="row">{{ cliente.id }}</th>
                             <td>{{ cliente.name }}</td>
-                            <td>{{ cliente.description }}</td>
+                            <td>{{ cliente.cpf }}</td>
                             <td>
                                 <a href="{% url 'clientes:edit_cliente' cliente.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
