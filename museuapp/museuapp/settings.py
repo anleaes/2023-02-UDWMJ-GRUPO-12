@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'historias.apps.HistoriasConfig',
      'artes.apps.ArtesConfig',
-    
+    'clientes.apps.ClientesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
