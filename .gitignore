@@ -1,23 +1,43 @@
 db.sqlite3
-__pycache__
-*__pycache__*
-/__pycache__/*
-*/__pycache__/*
-*.py[cod]
-*$py.class
+*__pycache__
+/dist/
 *.pyc
-*.DS_Store
-/categories/__pycache__/*
-/categories/migrations/*
-/products/__pycache__/*
-/products/migrations/*
-/clients/__pycache__/*
-/clients/migrations/*
-/artes/__pycache__/*
-/artes/migrations/*
-/historia/__pycache__/*
-/historia/migrations/*
-/artistas/__pycache__/*
-/artistas/migrations/*
-/core/__pycache__/*
-/core/migrations/*
+*.pyo
+__pycache__/
+*.py[cod]
+.idea/
+*.egg
+**/__pycache__
+**/*.pyc
+!**/__pycache__/
+!**/migrations/
+!**/migrations/**/__pycache__/
+pycache/
+migrations/
+
+--- Clientes
+/museuapp/apps/clientes/__pycache__/*
+/museuapp/apps/clientes/migrations/__pycache__/*
+
+-- Valores
+/museuapp/apps/valores/__pycache__/*
+/museuapp/apps/valores/migrations/__pycache__/*
+
+-- Historia
+/museuapp/apps/historias/__pycache__/*
+/museuapp/apps/historias/migrations/__pycache__/*
+
+-- Artistas
+/museuapp/apps/artistas/__pycache__/*
+/museuapp/apps/artistas/migrations/__pycache__/*
+
+-- Museuapp
+/museuapp/museuapp/artistas/__pycache__/*
+/museuapp/museuapp/artistas/migrations/__pycache__/*
+
+
+/museuapp/museuapp/__pycache__/__init__.cpython-39.pyc'
+/museuapp/museuapp/__pycache__/settings.cpython-39.pyc'
+/museuapp/museuapp/__pycache__/urls.cpython-39.pyc'
+/museuapp/museuapp/__pycache__/wsgi.cpython-39.pyc'
+
