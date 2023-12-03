@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'clientes.apps.ClientesConfig',
     'artistas.apps.ArtistasConfig',
     'valores.apps.ValoresConfig',
+    'categories.apps.CategoriesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
