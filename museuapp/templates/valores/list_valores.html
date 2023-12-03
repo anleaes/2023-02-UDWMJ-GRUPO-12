@@ -21,8 +21,8 @@
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Descricao</th>
+                    <th scope="col">Id Arte</th>
+                    <th scope="col">Valores</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     </tr>
@@ -31,8 +31,8 @@
                     {% for valor in valores %}
                         <tr>
                             <th scope="row">{{ valor.id }}</th>
-                            <td>{{ valor.name }}</td>
-                            <td>{{ valor.description }}</td>
+                            <td>{{ valor.idarte }}</td>
+                            <td>{{ valor.valor }}</td>
                             <td>
                                 <a href="{% url 'valores:edit_valor' valor.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>
