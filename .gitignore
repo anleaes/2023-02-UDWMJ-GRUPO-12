@@ -10,4 +10,5 @@ db.sqlite3
 /clients/migrations/*
 /orders/__pycache__/*
 /orders/migrations/*
-/artes/_py
+/artes/__pycache__/*
+/historia/__pycache__/*
