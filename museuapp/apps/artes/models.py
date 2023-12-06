@@ -5,6 +5,10 @@ class Arte(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     name = models.CharField('Nome', max_length=50)
+    idartista = models.IntegerField('Nome', max_length=5)
+    idvalor = models.IntegerField('Nome', max_length=5)
+    idhistoria = models.IntegerField('Nome', max_length=5)
+    idcategoria = models.IntegerField('Nome', max_length=5)
     url = models.CharField('URL', max_length=200)
     description = models.TextField('Descricao', max_length=100) 
 

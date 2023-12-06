@@ -16,7 +16,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ arte.name }}</h5>
         <p class="card-text">{{ arte.description }}</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
+        <a href="{% url 'artes:view_arte' arte.id %}" class="btn btn-primary">Ver Mais sobre a Arte</a>
       </div>
     </div>
   {% endfor %}

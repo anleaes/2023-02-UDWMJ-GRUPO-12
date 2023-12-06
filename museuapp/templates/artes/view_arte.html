@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detalhes da Arte - {{ artes.name }}
+{% endblock title %}
+
+{% block body %}
+    <div class="container" style="margin bottom: 4rem;">
+        <br />
+        <h5><b>Detalhes da Arte</b></h5>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Informações da Arte</p>
+                <h1>Nome: {{ artes.name }}</h1> 
+                <h3>Artista: {{ artistas.name }} </h3>
+                <img class="card-img-top" src={{ artes.url }} alt="Imagem de capa do card">
+                <h4>Descrição: {{ artes.description }}</h4>
+
+                <h2>Informações da História Relacionada</h2>
+                {% if historias %}
+                    <p>Descrição da História: {{ historias.description }}</p>
+                    <!-- Outras informações da História que você deseja exibir -->
+                {% else %}
+                    <p>Nenhuma história relacionada encontrada.</p>
+                {% endif %}
+
+                <h2>Informações do Valor Relacionado</h2>
+                {% if valores %}
+                    <p>Valor: {{ valores.valor }}</p>
+                    <!-- Outras informações do Valor que você deseja exibir -->
+                {% else %}
+                    <p>Nenhum valor relacionado encontrado.</p>
+                {% endif %}
+
+                <h2>Informações da Categoria Relacionada</h2>
+                {% if categories %}
+                    <p>Nome da Categoria: {{ categories.name }}</p>
+                    <!-- Outras informações da Categoria que você deseja exibir -->
+                {% else %}
+                    <p>Nenhuma categoria relacionada encontrada.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock body %}
