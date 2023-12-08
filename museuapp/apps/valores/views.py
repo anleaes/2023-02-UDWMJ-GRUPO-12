@@ -2,7 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ValorForm
 from .models import Valor
 
+
 # Create your views here.
+
 
 def add_valor(request):
     template_name = 'valores/add_valor.html'
@@ -26,6 +28,7 @@ def list_valores(request):
     }
     return render(request, template_name, context)
 
+
 def edit_valor(request, id_valor):
     template_name = 'valores/add_valor.html'
     context ={}
@@ -38,6 +41,7 @@ def edit_valor(request, id_valor):
     form = ValorForm(instance=valor)
     context['form'] = form
     return render(request, template_name, context)
+
 
 def delete_valor(request, id_valor):
     valor = Valor.objects.get(id=id_valor)
