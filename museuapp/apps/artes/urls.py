@@ -9,4 +9,5 @@ urlpatterns = [
     path('editar/<int:id_arte>/', views.edit_arte, name='edit_arte'),
     path('excluir/<int:id_arte>/', views.delete_arte, name='delete_arte'),
     path('<int:id_arte>/', views.view_arte, name='view_arte'),
+    path('buscar/', views.search_arte, name='search_arte'),
 ]
