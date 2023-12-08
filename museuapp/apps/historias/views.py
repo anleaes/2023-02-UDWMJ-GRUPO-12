@@ -3,7 +3,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import HistoriaForm
 from .models import Historia
 
+
 # Create your views here.
+
 
 def add_historia(request):
     template_name = 'historias/add_historia.html'
@@ -27,6 +29,7 @@ def list_historias(request):
     }
     return render(request, template_name, context)
 
+
 def edit_historia(request, id_historia):
     template_name = 'historias/add_historia.html'
     context ={}
@@ -39,6 +42,7 @@ def edit_historia(request, id_historia):
     form = HistoriaForm(instance=historia)
     context['form'] = form
     return render(request, template_name, context)
+
 
 def delete_historia(request, id_historia):
     historia = Historia.objects.get(id=id_historia)

@@ -5,7 +5,7 @@
 {% endblock title %}
 
 {% block body %}
-
+{% if user.is_authenticated %}
 <div style="padding: 8rem;">
   <h1 class="py-4">Artes em esposição:</h1>
 
@@ -22,7 +22,7 @@
   {% endfor %}
   </div>
 </div>
-
+{% endif %}
 <style>
   .d-flex {                   
     display: flex;

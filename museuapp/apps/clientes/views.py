@@ -2,7 +2,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ClienteForm
 from .models import Cliente
 
+
 # Create your views here.
+
+
 def add_cliente(request):
     template_name = 'clientes/add_cliente.html'
     context = {}

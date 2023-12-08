@@ -6,7 +6,10 @@ from valores.models import Valor
 from categories.models import Category
 from artistas.models import Artista
 
+
 # Create your views here.
+
+
 def add_arte(request):
     template_name = 'artes/add_arte.html'
     context = {}
@@ -21,6 +24,7 @@ def add_arte(request):
     context['form'] = form
     return render(request, template_name, context)
 
+
 def list_artes(request):
     template_name = 'artes/list_artes.html'
     artes = Arte.objects.filter()
@@ -28,6 +32,7 @@ def list_artes(request):
         'artes': artes
     }
     return render(request, template_name, context)
+
 
 def edit_arte(request, id_arte):
     template_name = 'artes/add_arte.html'
@@ -42,6 +47,7 @@ def edit_arte(request, id_arte):
     context['form'] = form
     return render(request, template_name, context)
 
+
 def view_arte(request, id_arte):
     template_name = 'artes/view_arte.html'
     context ={}
@@ -55,10 +61,12 @@ def view_arte(request, id_arte):
     context['form'] = form
     return render(request, template_name, context)
 
+
 def delete_arte(request, id_arte):
     arte = Arte.objects.get(id=id_arte)
     arte.delete()
     return redirect('artes:list_artes')
+
 
 def view_arte(request, id_arte):
     template_name = 'artes/view_arte.html'

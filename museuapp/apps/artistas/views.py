@@ -2,7 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ArtistaForm
 from .models import Artista
 
+
 # Create your views here.
+
 
 def add_artista(request):
     template_name = 'artistas/add_artista.html'
@@ -18,6 +20,7 @@ def add_artista(request):
     context['form'] = form
     return render(request, template_name, context)
 
+
 def list_artistas(request):
     template_name = 'artistas/list_artistas.html'
     artistas = Artista.objects.filter()
@@ -25,6 +28,7 @@ def list_artistas(request):
         'artistas': artistas
     }
     return render(request, template_name, context)
+
 
 def edit_artista(request, id_artista):
     template_name = 'artistas/add_artista.html'
@@ -38,6 +42,7 @@ def edit_artista(request, id_artista):
     form = ArtistaForm(instance=artista)
     context['form'] = form
     return render(request, template_name, context)
+
 
 def delete_artista(request, id_artista):
     artista = Artista.objects.get(id=id_artista)

@@ -22,6 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contas/', include('accounts.urls', namespace='accounts')),
     path('', include('core.urls', namespace='core')),
     path('historias/', include('historias.urls', namespace='historias')),
     path('artes/', include('artes.urls', namespace='artes')),
@@ -29,7 +30,8 @@ urlpatterns = [
     path('artistas/', include('artistas.urls', namespace='artistas')),
     path('valores/', include('valores.urls', namespace='valores')),
     path('categorias/', include('categories.urls', namespace='categories'))
-]
+    
+] 
 
 
 
