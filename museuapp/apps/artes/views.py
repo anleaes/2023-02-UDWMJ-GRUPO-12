@@ -92,3 +92,12 @@ def view_arte(request, id_arte):
     context['categories'] = category
 
     return render(request, template_name, context)
+
+def search_arte(request):
+    template_name = 'artes/list_artes.html'
+    query = request.GET.get('query')
+    arte = Arte.objects.filter(name__icontains=query)
+    context = {
+        'artes': arte,
+    }
+    return render(request,template_name, context)
