@@ -1,0 +1,58 @@
+@startuml
+class Category{
+    name: CharField
+    description: TextField
+}
+
+class Value{
+    idart: IntField
+    value: FloatField
+}
+
+class Artist{
+     name:CharField 
+     age:TextField
+     nationality:TextField
+}
+
+class Art{
+     name:CharField
+     idartist:IntegerField
+     idvalue:IntegerField
+     idhistory:IntegerField
+     idcategory:IntegerField
+     url:CharField
+     description:TextField
+}
+
+class History{
+      name:CharField
+      description:TextField
+}
+
+class Clients{
+      name:CharField
+      cpf:TextField
+}
+
+Art --* Category
+Art --* Artist
+Art --* History
+Art --* Value
+
+
+
+
+
+'tipos de dados para formularios webs
+'CharField
+'TextField
+'DateTimeField
+'BooleanField
+'ImageField
+'FileField
+'DateField
+'ForeignKey
+'EmailField
+'CharField CHOICES
+@enduml
